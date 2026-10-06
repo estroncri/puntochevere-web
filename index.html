@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1a1a" />
+  <title>Punto Chevere · Menú a domicilio</title>
+  <meta name="description" content="Punto Chevere - Comida Rápida. Hamburguesas, perros, salchipapas, asados y más. Pide a domicilio fácil por WhatsApp." />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <div class="brand">
+        <img src="img/logo.png" alt="Punto Chevere" class="brand-logo" />
+        <div class="brand-txt">PUNTO <span>CHEVERE</span></div>
+      </div>
+      <!-- EDITAR: número de teléfono visible -->
+      <a class="topbar-tel" href="tel:+573000000000"><i class="bi bi-telephone-fill"></i><span>300 000 0000</span></a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="wrap hero-in">
+      <img src="img/logo.png" alt="Punto Chevere" class="hero-logo" />
+      <h1>La <span>comida rápida</span> más chevere</h1>
+      <p class="hero-sub">Hamburguesas, perros, salchipapas, asados y mucho más. Pide a domicilio en 1 minuto.</p>
+      <div class="hero-badges">
+        <span><i class="bi bi-whatsapp"></i> Pedido por WhatsApp</span>
+        <span><i class="bi bi-truck"></i> A domicilio</span>
+        <span><i class="bi bi-lightning-charge-fill"></i> Rápido</span>
+      </div>
+      <a href="#menu" class="btn-hero"><i class="bi bi-arrow-down-circle-fill"></i> Ver el menú</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS (nav pegajosa) -->
+  <nav class="cats" id="cats"><div class="wrap cats-in" id="catsIn"></div></nav>
+
+  <!-- MENU -->
+  <main class="wrap" id="menu"></main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <img src="img/logo.png" alt="Punto Chevere" class="footer-logo" />
+      <div class="footer-col">
+        <h4><i class="bi bi-clock-fill"></i> Horario</h4>
+        <!-- EDITAR: horario real -->
+        <p>Lunes a Domingo<br/>4:00 p. m. – 11:00 p. m.</p>
+      </div>
+      <div class="footer-col">
+        <h4><i class="bi bi-geo-alt-fill"></i> Ubicación</h4>
+        <!-- EDITAR: dirección real -->
+        <p>Tu dirección aquí<br/>Barrio · Ciudad</p>
+      </div>
+      <div class="footer-col">
+        <h4><i class="bi bi-chat-heart-fill"></i> Síguenos</h4>
+        <div class="footer-social">
+          <!-- EDITAR: enlaces reales -->
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">PUNTO CHEVERE · Comida Rápida — Hecho con <i class="bi bi-heart-fill"></i></div>
+  </footer>
+
+  <!-- BOTON FLOTANTE DEL CARRITO -->
+  <button class="fab" id="fab" hidden>
+    <span class="fab-l"><i class="bi bi-bag-fill"></i> <span id="fabCant">0</span> productos</span>
+    <span class="fab-r" id="fabTotal">$ 0</span>
+  </button>
+
+  <!-- MODAL DEL CARRITO -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="sheet" id="sheet">
+      <div class="sheet-head">
+        <h3><i class="bi bi-bag-check-fill"></i> Tu pedido</h3>
+        <button class="sheet-x" id="cerrar"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="sheet-body" id="sheetBody"></div>
+    </div>
+  </div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
